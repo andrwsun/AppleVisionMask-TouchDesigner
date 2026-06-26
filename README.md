@@ -34,18 +34,6 @@ it extracts to a per machine cache at ~/.td_plugin_cache/applevisionmask/, strip
 the macOS quarantine flag, and loads itself. That cache is the only thing it
 writes to disk, so the tox works from any folder or project.
 
-## If macOS ever blocks it
-
-The plugin is ad hoc signed, not Apple notarized. Extracting from inside the tox
-normally avoids any Gatekeeper prompt, but if a machine ever blocks it, open
-Terminal and run:
-
-    xattr -dr com.apple.quarantine ~/.td_plugin_cache/applevisionmask/AppleVisionMask.plugin
-
-then press Setup / Reload. You can also allow it under System Settings, Privacy
-and Security. Fully prompt free sharing to other people would need Apple
-notarization, which requires a paid Apple Developer account.
-
 ## LLM Disclaimer
 
 I do not use AI coding assistants to create my TouchDesigner networks / art. However, this wrapper .tox was created with the use of an AI coding assistant for the purpose of bringing accesible tooling for TouchDesigner users of all skill levels. As such, ALL tools that I create in this nature will be ported from open-source material, credited, and free for anyone to use. The underlying Apple Vision C++ plugin is Aaron Pereira's original work, linked at the top.
